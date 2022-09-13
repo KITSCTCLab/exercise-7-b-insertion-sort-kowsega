@@ -1,16 +1,18 @@
 from typing import List
 
 def insertionSort(array) -> List[int]:
-  for i in range(1, item-1):
-    v = a[i]
-    j = i-1
-    while j>=0 and a[j]>v:
-      a[j+1] = a[j]
-      j = j-1
-    a[j+1] = v
-return a
+  # Write your code here
+   for step in range(1, len(array)):
+        key = array[step]
+        j = step - 1    
+        while j >= 0 and key < array[j]:
+            array[j + 1] = array[j]
+            j = j - 1
+       
+        array[j + 1] = key
+   return array
 
-# data = [9, 5, 1, 4, 3]
+data = [9, 5, 1, 4, 3]
 input_data = input()
 data = []
 for item in input_data.split(', '):
